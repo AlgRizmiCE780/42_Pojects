@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:05:43 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/19 12:51:44 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/11/30 16:15:34 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *str);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 char	*ft_set_line_to_mem(int fd, char *memory);
