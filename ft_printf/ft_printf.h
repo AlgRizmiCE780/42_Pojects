@@ -6,21 +6,28 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:08:41 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/25 11:56:23 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/11/28 17:32:45 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_PRINT_F_H
 # define LIBFT_PRINT_F_H
 
-# include "libft/libft.h"
 # include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <unistd.h> 
+# include <stdint.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-int		ft_printf(const char *var);
-void	ft_print_char(char c);
-void    ft_print_str(char *str);
+int	ft_putchar_fd(char c, int fd);
+int	ft_putnbr_fd(int n, int fd);
+int	ft_putstr_fd(char *s, int fd);
+int	ft_puthex(uintptr_t n, int format);
+
+int ft_printf(const char *format, ...);
+int	ft_print_char(char c);
+int	ft_print_str(char *str);
+int	ft_print_dec(int num);
+int	ft_print_hex(unsigned int n, char format);
+int	ft_print_unsigned(unsigned int num);
 #endif

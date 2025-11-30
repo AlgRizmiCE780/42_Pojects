@@ -6,13 +6,13 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:49:12 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/24 11:51:21 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/11/29 11:42:47 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *var)
+int ft_printf(const char *format, ...)
 {
     
 }
