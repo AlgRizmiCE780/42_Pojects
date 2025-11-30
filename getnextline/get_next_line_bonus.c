@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 15:41:53 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/29 16:48:54 by fmohamed         ###   ########.fr       */
+/*   Created: 2025/11/29 16:44:13 by fmohamed          #+#    #+#             */
+/*   Updated: 2025/11/29 17:06:24 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_set_line_to_mem(int fd, char *memory)
 {
@@ -40,21 +40,21 @@ char	*ft_set_line_to_mem(int fd, char *memory)
 
 char	*get_next_line(int fd)
 {
-	static char	*mem;
+	static char	*mem[4096];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
 		return (NULL);
 	}
-	mem = ft_set_line_to_mem(fd, mem);
-	if (!mem)
+	mem[fd] = ft_set_line_to_mem(fd, mem[fd]);
+	if (!mem[fd])
 	{
 		return (NULL);
 	}
-	line = ft_fetch_line_from_mem(mem);
+	line = ft_fetch_line_from_mem(mem[fd]);
 	if (!line)
 		return (NULL);
-	mem = ft_set_nextline(mem, ft_strlen(line));
+	mem[fd] = ft_set_nextline(mem[fd], ft_strlen(line));
 	return (line);
 }
