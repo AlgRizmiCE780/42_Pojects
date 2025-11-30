@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:31:30 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/29 11:35:53 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/11/30 16:35:34 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,5 @@ int	ft_print_ptr(const void *addr)
 	address = (uintptr_t)addr;
 	write(1, "0x", 2);
 	count += ft_puthex(address, 0);
-	return count;
+	return (count);
 }
