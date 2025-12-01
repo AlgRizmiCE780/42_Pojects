@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:31:30 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/30 16:35:34 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:35:14 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,37 +77,5 @@ int	ft_puthex(uintptr_t n, int format)
 	else if (digit < 10)
 		digit = digit + '0';
 	count += ft_putchar_fd(digit, 1);
-	return (count);
-}
-
-int	ft_print_char(char c)
-{
-	int	count;
-
-	count = 0;
-	count = ft_putchar_fd(c, 1);
-	return (count);
-}
-
-int	ft_print_str(char *str)
-{
-	int	count;
-
-	count = 0;
-	if (!str)
-		write(1, "", 1);
-	count = ft_putstr_fd(str, 1);
-	return (count);
-}
-
-int	ft_print_ptr(const void *addr)
-{
-	int			count;
-	uintptr_t	address;
-
-	count = 2;
-	address = (uintptr_t)addr;
-	write(1, "0x", 2);
-	count += ft_puthex(address, 0);
 	return (count);
 }
