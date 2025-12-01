@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:31:30 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/01 14:35:14 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:54:35 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,10 @@ int	ft_puthex(uintptr_t n, int format)
 	char	digit;
 	int		count;
 
-	count = 0;
+	count = 1;
 	digit = 0;
 	if (n >= 16)
-		ft_puthex(n / 16, format);
+		count += ft_puthex(n / 16, format);
 	digit = (n % 16);
 	if (digit >= 10 && digit <= 16)
 	{
@@ -76,6 +76,6 @@ int	ft_puthex(uintptr_t n, int format)
 	}
 	else if (digit < 10)
 		digit = digit + '0';
-	count += ft_putchar_fd(digit, 1);
+	ft_putchar_fd(digit, 1);
 	return (count);
 }

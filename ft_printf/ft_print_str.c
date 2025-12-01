@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 14:31:11 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/01 14:31:30 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:37:42 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_str(char *str)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (!str)
