@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:41:53 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/30 16:19:30 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/02 18:47:05 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,4 +132,18 @@ char	*get_next_line(int fd)
 		return (NULL);
 	mem = ft_set_nextline(mem, ft_strlen(line));
 	return (line);
+}
+
+int	main(void)
+{
+	int fd = open("test.txt", O_RDONLY);
+	char *line;
+
+	line = get_next_line(fd);
+	printf("%s",line);
+	free(line);
+	line = get_next_line(fd);
+	printf("%s",line);
+	free(line);
+	close(fd);
 }
