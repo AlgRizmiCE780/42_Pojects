@@ -12,11 +12,11 @@
 
 #include "get_next_line.h"
 
-char	*ft_strjoin_free(const char *s1, const char *s2)
+char *ft_strjoin_free(const char *s1, const char *s2)
 {
-	size_t	s1len;
-	size_t	s2len;
-	char	*strjoin;
+	size_t s1len;
+	size_t s2len;
+	char *strjoin;
 
 	if (!s2)
 		return (NULL);
@@ -35,10 +35,10 @@ char	*ft_strjoin_free(const char *s1, const char *s2)
 	return (strjoin);
 }
 
-char	*ft_fetch_line_from_mem(char *memory)
+char *ft_fetch_line_from_mem(char *memory)
 {
-	size_t	i;
-	char	*line;
+	size_t i;
+	char *line;
 
 	i = 0;
 	if (!memory[i])
@@ -63,10 +63,10 @@ char	*ft_fetch_line_from_mem(char *memory)
 	return (line);
 }
 
-char	*ft_set_nextline(char *memory, size_t len_line)
+char *ft_set_nextline(char *memory, size_t len_line)
 {
-	size_t	i;
-	char	*mem;
+	size_t i;
+	char *mem;
 
 	i = 0;
 	if (!memory[i])
@@ -87,10 +87,10 @@ char	*ft_set_nextline(char *memory, size_t len_line)
 	return (mem);
 }
 
-char	*ft_set_line_to_mem(int fd, char *memory)
+char *ft_set_line_to_mem(int fd, char *memory)
 {
-	ssize_t	bytes_data;
-	char	*buffer;
+	ssize_t bytes_data;
+	char *buffer;
 
 	bytes_data = 1;
 	if (!memory)
@@ -113,10 +113,10 @@ char	*ft_set_line_to_mem(int fd, char *memory)
 	return (memory);
 }
 
-char	*get_next_line(int fd)
+char *get_next_line(int fd)
 {
-	static char	*mem;
-	char		*line;
+	static char *mem;
+	char *line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
