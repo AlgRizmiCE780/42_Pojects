@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:03:28 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/02 14:05:52 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/09 16:35:02 by rahman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char *ft_strchr(const char *s, int c)
 {
 	char ch;
-
 	ch = (char)c;
 	while (*s)
 	{

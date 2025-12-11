@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 14:34:41 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/10 21:15:06 by rahman           ###   ########.fr       */
+/*   Created: 2025/12/10 21:31:17 by rahman            #+#    #+#             */
+/*   Updated: 2025/12/10 21:34:06 by rahman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
+# include <stdlib.h>
+# include <unistd.h>
 
-int	ft_print_ptr(const void *addr)
-{
-	int			count;
-	uintptr_t	addrs;
+// Function prototypes for libft
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
+int		ft_putnbr_fd(int n, int fd);
+size_t	ft_strlen(const char *s);
 
-	count = 3;
-	addrs = (uintptr_t)addr;
-	write(1, "0x", 2);
-	count += ft_puthex(addrs, 0);
-	return (count);
-}
+#endif
