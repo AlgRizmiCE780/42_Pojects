@@ -6,7 +6,7 @@
 /*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:49:12 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/11 13:14:00 by rahman           ###   ########.fr       */
+/*   Updated: 2025/12/12 19:35:12 by rahman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int specifier_select(char type, va_list args)
     else if (type == 'x' || type == 'X')
         count += ft_print_hex(va_arg(args, int), type);
     else if (type == '%')
-        count += ft_print_char(va_arg(args, int));
+        count += ft_print_char('%');
     else
     {
         write(1, "\n\nERROR: No valid type specified!\n", 34);

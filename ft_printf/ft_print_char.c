@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 14:31:53 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/01 14:37:56 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/12 17:02:36 by rahman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(char c)
+int ft_print_char(char c)
 {
-	int	count;
+	int count;
 
 	count = 0;
-	count = ft_putchar_fd(c, 1);
+	count += ft_putchar_fd(c, 1);
 	return (count);
 }
