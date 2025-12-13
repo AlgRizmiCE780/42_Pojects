@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rahman <rahman@student.42.fr>              +#+  +:+       +#+         #
+#    By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 13:28:19 by fmohamed          #+#    #+#              #
-#    Updated: 2025/12/12 19:37:31 by rahman           ###   ########.fr        #
+#    Updated: 2025/12/13 21:04:20 by fmohamed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC = ft_printf.c \
 # Libft source files
 LIBFT_DIR = libft
 LIBFT_SRC = ft_putchar.c \
-            ft_putnbr.c \
+            ft_putnbrunsign.c \
             ft_putstr.c \
             ft_strlen.c \
             ft_itoa.c

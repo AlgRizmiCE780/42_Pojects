@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:49:12 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/12 19:35:12 by rahman           ###   ########.fr       */
+/*   Updated: 2025/12/13 21:23:32 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int specifier_select(char type, va_list args)
 {
@@ -58,3 +59,9 @@ int ft_printf(const char *format, ...)
 
     return count;
 }
+
+// int main(){
+//     ft_printf("ft_printf:%u\n", -1);
+//     printf("printf:%u\n", -1);
+    
+// }

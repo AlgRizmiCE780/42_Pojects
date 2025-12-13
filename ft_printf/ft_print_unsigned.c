@@ -1,9 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/13 21:24:50 by fmohamed          #+#    #+#             */
+/*   Updated: 2025/12/13 21:24:53 by fmohamed         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_print_unsigned(unsigned int num)
+int	ft_print_unsigned(unsigned int num)
 {
-    int count = 0;
-
-    count += ft_putnbr_fd(num,1);
-    return count;
+	return (ft_putnbrunsign_fd(num, 1));
 }
