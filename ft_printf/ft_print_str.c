@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 14:31:11 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/12 19:42:30 by rahman           ###   ########.fr       */
+/*   Updated: 2025/12/16 15:07:19 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_str(char *str)
+int	ft_print_str(char *str)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (!str)

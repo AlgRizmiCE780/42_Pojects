@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_hexptr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 14:31:53 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/16 14:59:57 by fmohamed         ###   ########.fr       */
+/*   Created: 2025/12/16 14:03:43 by fmohamed          #+#    #+#             */
+/*   Updated: 2025/12/16 15:18:56 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(char c)
+int	ft_print_hexptr(uintptr_t n)
 {
-	int	count;
-
-	count = 0;
-	count += ft_putchar_fd(c, 1);
-	return (count);
+	return (ft_puthexptr(n));
 }

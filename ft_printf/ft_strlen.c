@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 21:31:17 by rahman            #+#    #+#             */
-/*   Updated: 2025/12/13 21:02:16 by fmohamed         ###   ########.fr       */
+/*   Created: 2025/12/16 14:47:34 by fmohamed          #+#    #+#             */
+/*   Updated: 2025/12/16 15:02:55 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
+size_t	ft_strlen(const char *str)
+{
+	int	i;
 
-// Function prototypes for libft
-int		ft_putchar_fd(char c, int fd);
-int		ft_putstr_fd(char *s, int fd);
-int	ft_putnbrunsign_fd(unsigned int n, int fd);
-size_t	ft_strlen(const char *s);
-char	*ft_itoa(int n);
-
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}

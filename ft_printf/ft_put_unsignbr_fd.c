@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*   ft_put_unsignbr_fd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/13 21:24:50 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/13 21:24:53 by fmohamed         ###   ########.fr       */
+/*   Created: 2025/12/16 14:47:56 by fmohamed          #+#    #+#             */
+/*   Updated: 2025/12/16 15:15:21 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_unsigned(unsigned int num)
+int	ft_put_unsignbr_fd(unsigned int n, int fd)
 {
-	return (ft_putnbrunsign_fd(num, 1));
+	int	count;
+
+	count = 0;
+	if (n >= 10)
+		count += ft_put_unsignbr_fd(n / 10, fd);
+	count += ft_putchar_fd((n % 10) + '0', fd);
+	return (count);
 }

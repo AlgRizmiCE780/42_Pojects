@@ -1,11 +1,21 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/16 14:00:39 by fmohamed          #+#    #+#             */
+/*   Updated: 2025/12/16 15:08:13 by fmohamed         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_puthex(uintptr_t n, int format)
+int	ft_puthex(unsigned int n, int format)
 {
-	char digit;
-	int count;
+	char	digit;
+	int		count;
 
 	count = 1;
 	digit = 0;

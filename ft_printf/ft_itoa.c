@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 20:43:03 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/12 17:08:48 by rahman           ###   ########.fr       */
+/*   Updated: 2025/12/16 14:59:46 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 size_t	alloc_size(long n)
 {
