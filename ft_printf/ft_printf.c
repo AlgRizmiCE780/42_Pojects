@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:49:12 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/17 13:41:33 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/17 14:34:56 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,3 @@ int	ft_printf(const char *format, ...)
 	}
 	return (count);
 }
-
-// int main(){
-// 	ft_printf("num:%d",42);
-// }

@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:08:41 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/17 12:08:30 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/17 14:21:13 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 char	*ft_itoa(int n);
 int		ft_putchar_fd(char c, int fd);
 int		ft_putstr_fd(char *s, int fd);
-int		ft_put_unsignbr_fd(unsigned int n, int fd);
+int		ft_put_unsignbr(unsigned int n, int fd);
 int		ft_puthexptr(uintptr_t n);
 int		ft_puthex(unsigned int n, int format);
 
