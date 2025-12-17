@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:08:41 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/16 15:19:18 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/17 12:08:30 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 
 char	*ft_itoa(int n);
-size_t	ft_strlen(const char *str);
 int		ft_putchar_fd(char c, int fd);
-int		ft_putnbr_fd(int n, int fd);
 int		ft_putstr_fd(char *s, int fd);
 int		ft_put_unsignbr_fd(unsigned int n, int fd);
 int		ft_puthexptr(uintptr_t n);

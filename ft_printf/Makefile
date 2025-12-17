@@ -6,7 +6,7 @@
 #    By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 13:28:19 by fmohamed          #+#    #+#              #
-#    Updated: 2025/12/16 15:19:41 by fmohamed         ###   ########.fr        #
+#    Updated: 2025/12/17 12:05:09 by fmohamed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,13 +29,10 @@ SRC = ft_printf.c \
       ft_putchar.c \
       ft_put_unsignbr_fd.c \
       ft_putstr.c \
-      ft_strlen.c \
       ft_itoa.c 
 
-# Object files
 OBJ = $(SRC:.c=.o)
 
-# All object files
 ALL_OBJ = $(OBJ)
 
 all: $(NAME)
