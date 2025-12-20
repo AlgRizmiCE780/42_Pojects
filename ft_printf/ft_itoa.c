@@ -6,13 +6,13 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 20:43:03 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/16 14:59:46 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/20 18:44:26 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	alloc_size(long n)
+static size_t	alloc_size(long n)
 {
 	size_t	i;
 
