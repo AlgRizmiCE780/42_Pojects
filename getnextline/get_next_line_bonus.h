@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:45:38 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/29 16:47:28 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:47:19 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-char	*ft_strjoin_free(char const *s1, char const *s2);
+char	*ft_strjoin_free(char *s1, char *s2);
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *str);

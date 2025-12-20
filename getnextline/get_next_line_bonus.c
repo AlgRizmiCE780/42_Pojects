@@ -6,7 +6,7 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:44:13 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/30 16:20:15 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:49:35 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,7 @@ char	*ft_strjoin_free(const char *s1, const char *s2)
 	size_t	s2len;
 	char	*strjoin;
 
-	if (!s2)
-		return (NULL);
-	if (!s1)
-		s1 = ft_strdup("");
-	if (!s1)
+	if (!s1 || !s2)
 		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
@@ -31,7 +27,7 @@ char	*ft_strjoin_free(const char *s1, const char *s2)
 		return (NULL);
 	ft_strlcpy(strjoin, s1, s1len + 1);
 	ft_strlcat(strjoin, s2, s1len + s2len + 1);
-	free((void *)s1);
+	free(s1);
 	return (strjoin);
 }
 
@@ -129,7 +125,11 @@ char	*get_next_line(int fd)
 	}
 	line = ft_fetch_line_from_mem(mem[fd]);
 	if (!line)
+	{
+		free(mem[fd]);
+		mem[fd] = NULL;
 		return (NULL);
+	}
 	mem[fd] = ft_set_nextline(mem[fd], ft_strlen(line));
 	return (line);
 }

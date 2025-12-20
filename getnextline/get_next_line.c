@@ -6,23 +6,19 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:41:53 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/11/30 16:19:30 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/20 16:46:18 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *ft_strjoin_free(const char *s1, const char *s2)
+char *ft_strjoin_free(char *s1, char *s2)
 {
 	size_t s1len;
 	size_t s2len;
 	char *strjoin;
 
-	if (!s2)
-		return (NULL);
-	if (!s1)
-		s1 = ft_strdup("");
-	if (!s1)
+	if (!s1 || !s2)
 		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
@@ -31,7 +27,7 @@ char *ft_strjoin_free(const char *s1, const char *s2)
 		return (NULL);
 	ft_strlcpy(strjoin, s1, s1len + 1);
 	ft_strlcat(strjoin, s2, s1len + s2len + 1);
-	free((void *)s1);
+	free(s1);
 	return (strjoin);
 }
 
@@ -118,18 +114,18 @@ char *get_next_line(int fd)
 	static char *mem;
 	char *line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-	{
+	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE > INT_MAX)
 		return (NULL);
-	}
 	mem = ft_set_line_to_mem(fd, mem);
 	if (!mem)
-	{
 		return (NULL);
-	}
 	line = ft_fetch_line_from_mem(mem);
 	if (!line)
+	{
+		free(mem);
+		mem = NULL;
 		return (NULL);
+	}
 	mem = ft_set_nextline(mem, ft_strlen(line));
 	return (line);
 }

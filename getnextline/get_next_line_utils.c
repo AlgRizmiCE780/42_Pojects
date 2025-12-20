@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rahman <rahman@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:03:28 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/09 16:35:02 by rahman           ###   ########.fr       */
+/*   Updated: 2025/12/20 16:46:31 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char ch;
+	char	ch;
+
 	ch = (char)c;
 	while (*s)
 	{
@@ -27,9 +28,9 @@ char *ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -37,11 +38,11 @@ size_t ft_strlen(const char *str)
 	return (i);
 }
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	size_t size;
-	size_t i;
-	char *dup;
+	size_t	size;
+	size_t	i;
+	char	*dup;
 
 	size = ft_strlen(s1);
 	dup = malloc((size + 1) * sizeof(char));
@@ -57,10 +58,10 @@ char *ft_strdup(const char *s1)
 	return (dup);
 }
 
-size_t ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t src_len;
-	size_t i;
+	size_t	src_len;
+	size_t	i;
 
 	if (!dest || !src)
 		return (0);
@@ -77,11 +78,11 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
 	return (src_len);
 }
 
-size_t ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t destlen;
-	size_t srclen;
-	size_t i;
+	size_t	destlen;
+	size_t	srclen;
+	size_t	i;
 
 	destlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
