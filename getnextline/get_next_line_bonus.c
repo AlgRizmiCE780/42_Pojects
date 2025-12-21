@@ -6,13 +6,13 @@
 /*   By: fmohamed <fmohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:44:13 by fmohamed          #+#    #+#             */
-/*   Updated: 2025/12/20 16:49:35 by fmohamed         ###   ########.fr       */
+/*   Updated: 2025/12/21 15:57:35 by fmohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char	*ft_strjoin_free(const char *s1, const char *s2)
+char	*ft_strjoin_free(char *s1, char *s2)
 {
 	size_t	s1len;
 	size_t	s2len;
